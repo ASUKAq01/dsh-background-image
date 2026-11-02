@@ -1,0 +1,10 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.log
+
+# Local tooling and credentials
+node_modules/
+.publish-tools/
+.env
+.env.*

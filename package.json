@@ -1,0 +1,65 @@
+{
+  "name": "@asukaq01/dsh-background-image",
+  "version": "1.0.0",
+  "description": "Custom background image for the DeepSeek Harness Web UI, with adjustable opacity and blur.",
+  "license": "MIT",
+  "author": "ASUKAq01",
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "background",
+    "background-image",
+    "wallpaper"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ASUKAq01/dsh-background-image.git"
+  },
+  "homepage": "https://github.com/ASUKAq01/dsh-background-image#readme",
+  "bugs": {
+    "url": "https://github.com/ASUKAq01/dsh-background-image/issues"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "validate": "node scripts/validate.mjs"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.1.7-rc.1 <0.3.0-0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  }
+}
